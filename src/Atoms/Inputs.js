@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Input, Row, Col, Divider } from "antd";
+import { Input, Row, Col, Divider, Space, Mentions, Switch } from "antd";
 import {
   DownloadOutlined,
   AudioOutlined,
@@ -16,7 +16,7 @@ const suffix = (
     }}
   />
 );
-
+const { Option } = Mentions;
 const Inputs = () => {
   return (
     <>
@@ -49,6 +49,32 @@ const Inputs = () => {
             <Input placeholder="audio " suffix={suffix} />
           </Col>
         </Row>
+        <Divider orientation="center">Password</Divider>
+        <Space direction="horizontal">
+          <Input.Password placeholder="Enter secret password" size="large" />
+        </Space>
+        <Divider orientation="center">Both side icons</Divider>
+        <Space direction="horizontal">
+          <Input
+            placeholder="username"
+            prefix={suffix}
+            suffix={outlinedlock}
+            bordered
+            type="datetime-local"
+          />
+        </Space>
+        <Divider orientation="center">Mentions</Divider>
+        <Space direction="horizontal">
+          <Mentions style={{ width: "100%" }} defaultValue="@user1">
+            <Option value="user2">user2</Option>
+            <Option value="user3">user3</Option>
+            <Option value="user4">user4</Option>
+          </Mentions>
+        </Space>
+        <Divider orientation="center">Toggle</Divider>
+        <Space direction="horizontal">
+          <Switch defaultChecked />
+        </Space>
       </div>
     </>
   );

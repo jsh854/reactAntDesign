@@ -1,26 +1,10 @@
-import logo from "./logo.svg";
-import { Button } from "antd";
+import Inputs from "./Atoms/Inputs";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          <br />
-          <Button type="primary">Created using antd</Button>
-        </a>
-      </header>
+      <Inputs />
     </div>
   );
 }
