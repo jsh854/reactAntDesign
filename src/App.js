@@ -1,10 +1,10 @@
-import Inputs from "./Atoms/Inputs";
+import Home from "./pages/Home";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Inputs />
+      <Home />
     </div>
   );
 }
